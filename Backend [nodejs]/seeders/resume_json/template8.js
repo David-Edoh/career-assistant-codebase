@@ -1,0 +1,805 @@
+const template8 = {
+    bodyHTML: `<html lang="en" class=""><head>
+
+    <!-- https://codepen.io/thiagobraga/pen/areqqr -->
+    <meta charset="UTF-8">
+    <title>Template 4</title>
+    <meta name="robots" content="noindex">
+  
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+    <link rel="canonical" href="https://codepen.io/thiagobraga/pen/areqqr">
+  
+    
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.min.css">
+  
+    <style id="INLINE_PEN_STYLESHEET_ID">
+      @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url("https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2") format('woff2');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: local('Roboto'), local('Roboto-Regular'), url("https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2") format('woff2');
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+  }
+  ul, ol {
+    list-style-position: inside !important;
+    padding-left: 0 !important;
+  }
+  section { 
+    page-break-inside:avoid;
+    page-break-after:auto;
+    padding-top: 2em;
+  }
+
+  .btn-print {
+    z-index: 1;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .resume {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13.0736px;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 1090.41px;
+  }
+  .resume h1 {
+    font-size: 2.86em;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  .resume h2 {
+    font-size: 1.43em;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .resume p {
+    margin-bottom: 1em;
+  }
+  .resume p:last-child {
+    margin-bottom: 0;
+  }
+  .resume ul {
+    padding-left: 20px;
+  }
+  .resume .resume__header,
+  .resume .resume__section {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+  }
+  .resume .resume__header {
+    padding: 6em 4em 0;
+  }
+  .resume .resume__section {
+    margin-bottom: 2em;
+  }
+  .resume .resume__section:last-child {
+    padding-bottom: 0;
+  }
+  .resume .resume__section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.43em;
+  }
+  .resume .resume__section-title > i {
+    margin-right: 0.63em;
+    font-size: 1.14em;
+    background-color: #5695cd;
+    color: #fff;
+    border: 0.25em solid #aacae6;
+    border-radius: 50%;
+    width: 2.51em;
+    height: 2.51em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+  }
+  .resume .resume__section-title > h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+  .resume .resume__columns {
+    overflow: hidden;
+    padding: 4em;
+    padding-top: 0;
+  }
+  .resume .resume__main {
+    float: left;
+    width: 75%;
+    padding-right: 6em;
+  }
+  .resume .resume__side {
+    float: left;
+    width: 25%;
+  }
+  .resume .other-info p > b {
+    color: #555;
+  }
+  .resume .info-item {
+    margin-bottom: 0.2em;
+    font-weight: 300;
+  }
+  .resume .info-item:last-child {
+    margin-bottom: 0;
+  }
+  .resume .info-label {
+    display: inline-block;
+    padding-right: 0.63em;
+    font-size: 1.14em;
+    min-width: 2.19em;
+    text-align: center;
+  }
+  .resume .info-label i {
+    color: #5695cd;
+  }
+  .resume .xp-item {
+    margin-bottom: 4em;
+  }
+  .resume .xp-item:last-child {
+    margin-bottom: 0;
+  }
+  .resume .xp-job {
+    font-size: 1.14em;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .resume .xp-job span,
+  .resume .xp-job small {
+    font-weight: 400;
+  }
+  .resume .xp-job small {
+    font-size: 0.9em;
+  }
+  .resume .xp-date {
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    color: #5695cd;
+  }
+  .resume .extra {
+    margin-bottom: 2em;
+  }
+  .resume .extra:last-child {
+    margin-bottom: 0;
+  }
+  .resume .extra-info small {
+    color: #666;
+    display: inline-block;
+    font-size: 0.7em;
+  }
+  .resume .extra-details,
+  .resume .extra-details__progress {
+    border-radius: 6px;
+  }
+  .resume .extra-details {
+    margin-top: 0.5em;
+    background-color: #d1d9e1;
+    width: 100%;
+    height: 5px;
+    position: relative;
+  }
+  .resume .extra-details__progress {
+    background-color: #5695cd;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .resume .lang-item {
+    margin-bottom: 2em;
+  }
+  .resume .lang-item:last-child {
+    margin-bottom: 0;
+  }
+  .resume .lang-label {
+    width: 8em;
+  }
+  @media print {
+    body {
+      min-width: initial !important;
+    }
+    .btn-print {
+      display: none;
+    }
+  }
+  
+</style>
+  
+    
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+  
+<body class="A4" data-new-gr-c-s-check-loaded="14.1138.0" data-gr-ext-installed="">
+      <div class="sheet" style="width: 211mm; height: max-content !important; min-height: 296mm;">
+        <div class="two-column resume">
+          <section class="resume__section resume__header">
+            <div class="resume__content">
+              <h1>{{first_name}} {{last_name}}</h1>
+              {{address_section}}
+              <div class="info-item"><span class="info-label"><i class="fa fa-envelope"></i></span><span class="info-text">{{email}}</span></div>
+              {{phone_number_section}}
+            </div>
+          </section>
+          <div class="resume__columns">
+            <div class="resume__main">
+              <section class="resume__section resume__summary">
+                <div class="resume__content">
+                  <div class="resume__section-title"><i class="fa fa-pencil-square-o"></i>
+                    <h2>Professional Summary</h2>
+                  </div>
+                  <div class="other">
+                    <div class="other-info">
+                      <p>
+                        {{about_me}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              {{experience_section}}
+              {{education_section}}
+            </div>
+            <div class="resume__side">
+            {{skills_section}}
+              <!-- <section class="resume__section resume__languages">
+                <div class="resume__content">
+                  <div class="resume__section-title"><i class="fa fa-globe"></i>
+                    <h2>Languages</h2>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">Portuguese <small>(native)</small></div>
+                    <div class="extra-details">
+                      <div class="extra-details__progress" style="width:100%"></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">English</div>
+                    <div class="extra-details">
+                      <div class="extra-details__progress" style="width:65%"></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">Spanish</div>
+                    <div class="extra-details">
+                      <div class="extra-details__progress" style="width:20%"></div>
+                    </div>
+                  </div>
+                </div>
+              </section> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  </body>
+  <script>
+    const handlePrint = () => window.print()
+  </script>
+  </html>`,
+    sampleHTML: `<html lang="en" class=""><head>
+
+    <meta charset="UTF-8">
+    <title>Template 4</title>
+  
+    <meta name="robots" content="noindex">
+  
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+    <link rel="canonical" href="https://codepen.io/thiagobraga/pen/areqqr">
+  
+    
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.min.css">
+  
+    <style id="INLINE_PEN_STYLESHEET_ID">
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url("https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2") format('woff2');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: local('Roboto'), local('Roboto-Regular'), url("https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2") format('woff2');
+  }
+  @page {
+    size: A4;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-print {
+    z-index: 1;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .resume {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13.0736px;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 1090.41px;
+  }
+  .resume h1 {
+    font-size: 2.86em;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  .resume h2 {
+    font-size: 1.43em;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .resume p {
+    margin-bottom: 1em;
+  }
+  .resume p:last-child {
+    margin-bottom: 0;
+  }
+  .resume ul {
+    padding-left: 20px;
+  }
+  .resume .resume__header,
+  .resume .resume__section {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+  }
+  .resume .resume__header {
+    padding: 6em 4em 0;
+  }
+  .resume .resume__section {
+    margin-bottom: 4em;
+  }
+  .resume .resume__section:last-child {
+    padding-bottom: 0;
+  }
+  .resume .resume__section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.43em;
+  }
+  .resume .resume__section-title > i {
+    margin-right: 0.63em;
+    font-size: 1.14em;
+    background-color: #5695cd;
+    color: #fff;
+    border: 0.25em solid #aacae6;
+    border-radius: 50%;
+    width: 2.51em;
+    height: 2.51em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+  }
+  .resume .resume__section-title > h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+  .resume .resume__columns {
+    overflow: hidden;
+    padding: 4em;
+    padding-top: 0;
+  }
+  .resume .resume__main {
+    float: left;
+    width: 75%;
+    padding-right: 6em;
+  }
+  .resume .resume__side {
+    float: left;
+    width: 25%;
+  }
+  .resume .other-info p > b {
+    color: #555;
+  }
+  .resume .info-item {
+    margin-bottom: 0.2em;
+    font-weight: 300;
+  }
+  .resume .info-item:last-child {
+    margin-bottom: 0;
+  }
+  .resume .info-label {
+    display: inline-block;
+    padding-right: 0.63em;
+    font-size: 1.14em;
+    min-width: 2.19em;
+    text-align: center;
+  }
+  .resume .info-label i {
+    color: #5695cd;
+  }
+  .resume .xp-item {
+    margin-bottom: 4em;
+  }
+  .resume .xp-item:last-child {
+    margin-bottom: 0;
+  }
+  .resume .xp-job {
+    font-size: 1.14em;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .resume .xp-job span,
+  .resume .xp-job small {
+    font-weight: 400;
+  }
+  .resume .xp-job small {
+    font-size: 0.9em;
+  }
+  .resume .xp-date {
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    color: #5695cd;
+  }
+  .resume .extra {
+    margin-bottom: 2em;
+  }
+  .resume .extra:last-child {
+    margin-bottom: 0;
+  }
+  .resume .extra-info small {
+    color: #666;
+    display: inline-block;
+    font-size: 0.7em;
+  }
+  .resume .extra-details,
+  .resume .extra-details__progress {
+    border-radius: 6px;
+  }
+  .resume .extra-details {
+    margin-top: 0.5em;
+    background-color: #d1d9e1;
+    width: 100%;
+    height: 5px;
+    position: relative;
+  }
+  .resume .extra-details__progress {
+    background-color: #5695cd;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .resume .lang-item {
+    margin-bottom: 2em;
+  }
+  .resume .lang-item:last-child {
+    margin-bottom: 0;
+  }
+  .resume .lang-label {
+    width: 8em;
+  }
+  @media print {
+    body {
+      min-width: initial !important;
+    }
+    .btn-print {
+      display: none;
+    }
+  }
+  
+</style>
+  
+    
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+  
+<body class="A4">
+  <div class="sheet">
+    <button class="btn btn-print btn-sm btn-light" onClick="handlePrint()">
+      <i class="fa fa-print"></i>
+      Print
+    </button>
+    <div class="two-column resume">
+      <section class="resume__section resume__header">
+        <div class="resume__content">
+          <h1>Thiago Braga</h1>
+          <div class="info-item"><span class="info-label"><i class="fa fa-location-arrow"></i></span><span class="info-text">
+              770 Marçal de Arruda Campos St., Bauru, SP, Brazil,
+              Zip: 17063-060</span></div>
+          <div class="info-item"><span class="info-label"><i class="fa fa-envelope"></i></span><span class="info-text">contato@thiagobraga.org</span></div>
+          <div class="info-item"><span class="info-label"><i class="fa fa-phone"></i></span><span class="info-text">+55 14 99165 5873</span></div>
+        </div>
+      </section>
+      <div class="resume__columns">
+        <div class="resume__main">
+          <section class="resume__section resume__summary">
+            <div class="resume__content">
+              <div class="resume__section-title"><i class="fa fa-pencil-square-o"></i>
+                <h2>Professional Summary</h2>
+              </div>
+              <div class="other">
+                <div class="other-info">
+                  <p>
+                    PHP & JavaScript developer + Devops Enthusiast with a
+                    decade of success leading teams in delivering appropriate
+                    technology solutions for desktop and mobile products.
+                  </p>
+                  <p>
+                    Comprehensive knowledge of enterprise architecture,
+                    agile methodologies, remote work, cloud services and
+                    web-based applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="resume__section resume__experience">
+            <div class="resume__content">
+              <div class="resume__section-title"><i class="fa fa-briefcase"></i>
+                <h2>Employment History</h2>
+              </div>
+              <div class="xp-item">
+                <div class="xp-job">
+                  Full Stack Developer / DevOps
+                  <span>@ Grupo Tesseract</span><br/><small>Bauru, Sao Paulo</small>
+                </div>
+                <div class="xp-date">Apr. 2017 – current</div>
+                <div class="xp-detail">
+                  <ul>
+                    <li>
+                      Design, build or maintain web sites using Laravel,
+                      Bootstrap, Vue, React and WordPress
+                    </li>
+                    <li>Create scripting language tools</li>
+                    <li>Automate dev, builds and deploy tasks</li>
+                    <li>
+                      Maintain understanding of current web technologies or
+                      programming practices through continuing education,
+                      reading and sharing knowledge
+                    </li>
+                    <li>
+                      Develop databases that support web applications and
+                      web sites
+                    </li>
+                    <li>
+                      Develop and document style guidelines for web site
+                      content
+                    </li>
+                    <li>Recommend and implement performance improvements</li>
+                    <li>
+                      Select programming languages, design tools,
+                      or applications
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="xp-item">
+                <div class="xp-job">
+                  Full Stack Developer
+                  <span>@ Jurid Publicações Eletrônicas</span><br/><small>Bauru, Sao Paulo</small>
+                </div>
+                <div class="xp-date">Aug. 2018 – Apr. 2020</div>
+                <div class="xp-detail">
+                  <ul>
+                    <li>
+                      Build or maintain web sites using native PHP, Python
+                      and JavaScript
+                    </li>
+                    <li>
+                      Maintain and improve production databases running on
+                      Elasticsearch, Redis, PostgreSQL and MySQL
+                    </li>
+                    <li>Provide backup and maintenance of GNU/Linux servers</li>
+                    <li>Provide documentation for existent and new applications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="resume__side">
+          <section class="resume__section resume__skills">
+            <div class="resume__content">
+              <div class="resume__section-title"><i class="fa fa-align-center"></i>
+                <h2>Skills</h2>
+              </div>
+              <div class="resume__text">
+                <div class="extra">
+                  <div class="extra-info">PHP<br/><small>PHP 5 · PHP 7 · Laravel</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">JavaScript<br/><small>React · React Native · Vue</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 87%"></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">HTML<br/><small>HTML5 · Markdown · Pug</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">CSS<br/><small>Stylus · Sass · Bootstrap</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">DevOps<br/><small>Docker · Shell · AWS · CI/CD</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 82%"></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">Databases<br/><small>PostgreSQL · MySQL · Elasticsearch · Redis</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">Operating Systems<br/><small>
+                      <i class="fa fa-linux"></i> GNU/Linux ·
+                      <i class="fa fa-apple"></i> Mac OS ·
+                      <i class="fa fa-windows"></i> Windows</small></div>
+                  <div class="extra-details">
+                    <div class="extra-details__progress" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- <section class="resume__section resume__languages">
+            <div class="resume__content">
+              <div class="resume__section-title"><i class="fa fa-globe"></i>
+                <h2>Languages</h2>
+              </div>
+              <div class="extra">
+                <div class="extra-info">Portuguese <small>(native)</small></div>
+                <div class="extra-details">
+                  <div class="extra-details__progress" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="extra">
+                <div class="extra-info">English</div>
+                <div class="extra-details">
+                  <div class="extra-details__progress" style="width: 65%"></div>
+                </div>
+              </div>
+              <div class="extra">
+                <div class="extra-info">Spanish</div>
+                <div class="extra-details">
+                  <div class="extra-details__progress" style="width: 20%"></div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const handlePrint = () => window.print()
+</script>
+  </html>`,
+    experienceHTML: `<div class="xp-item">
+    <div class="xp-job">
+        {{position}}
+      <span>@ {{company_name}}</span><br><small>{{company_address}}</small>
+    </div>
+    <div class="xp-date">
+    {{experience_start_month}} {{experience_start_year}} - {{experience_end_month}} {{experience_end_year}}
+    </div>
+    <div class="xp-detail">
+        {{description}}
+    </div>
+  </div>`,
+    educationHTML: `<div class="xp-item">
+    <div class="xp-job">
+        {{discipline}}
+      <span>@ {{school_name}}</span><br><small>{{school_address}}</small>
+    </div>
+    <div class="xp-date">
+    {{education_start_month}} {{education_start_year}} - {{education_end_month}} {{education_end_year}}
+    </div>
+  </div>`,
+    skillHTML: `<div class="extra">
+    <div class="extra-info">{{skill}}</div>
+    <div class="extra-details">
+      <div class="extra-details__progress" style="width:90%"></div>
+    </div>
+  </div>`,
+
+  experienceSection: `<section class="resume__section resume__experience">
+  <div class="resume__content">
+    <div class="resume__section-title"><i class="fa fa-briefcase"></i>
+      <h2>Employment History</h2>
+    </div>
+    {{experience_list}}
+  </div>
+</section>`,
+  educationSection: `<section class="resume__section resume__experience">
+  <div class="resume__content">
+    <div class="resume__section-title"><i class="fa fa-briefcase"></i>
+      <h2>Education History</h2>
+    </div>
+    {{education_list}}
+  </div>
+</section>`,
+skillsSection: `<section class="resume__section resume__skills">
+<div class="resume__content">
+  <div class="resume__section-title"><i class="fa fa-align-center"></i>
+    <h2>Skills</h2>
+  </div>
+  <div class="resume__text">
+    {{skills_list}}
+  </div>
+</div>
+</section>`,
+phoneNumberSection: `<div class="info-item"><span class="info-label"><i class="fa fa-phone"></i></span><span class="info-text">{{phone_number}}</span></div>`,
+addressSection: `<div class="info-item">
+<span class="info-label"><i class="fa fa-location-arrow"></i></span><span class="info-text">
+{{address}}
+</span></div>`,
+    // projectSection: ``,
+    // websiteSection: ``,
+    // referenceSection: ``,
+    // profilePicSection: ``,
+    // socialsSection: ``,
+
+    // socialsHTML: ``,
+    // projectsHTML: ``,
+    // referencesHTML: ``,
+    // description: ``,
+    // thumbnail: ``,
+    createdAt: new Date(),
+    updatedAt: new Date()
+}
+module.exports = template8;

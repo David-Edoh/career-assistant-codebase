@@ -1,0 +1,237 @@
+<html>
+
+<head>
+    <title>Resume</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.min.css">
+
+    <style id="INLINE_PEN_STYLESHEET_ID">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "Calibri", sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            background: #fff;
+        }
+        ul, ol {
+            list-style-position: inside !important;
+            padding-left: 0 !important;
+        }        
+        .intro p {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .main img {
+            height: 150px;
+            width: 150px;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        table {
+            padding: 15px;
+            width: 100%;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        .w-10 {
+            width: 10%;
+        }
+
+        .w-20 {
+            width: 20%;
+        }
+
+        .w-30 {
+            width: 30%;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .w-60 {
+            width: 60%;
+        }
+
+        .w-70 {
+            width: 70%;
+        }
+
+        .w-80 {
+            width: 80%;
+        }
+
+        .w-90 {
+            width: 90%;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .wrapper {
+            margin: auto;
+            background: #ffffff;
+        }
+
+        .intro {
+            padding: 0 20px;
+        }
+
+        .intro h1 {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-header {
+            border-bottom: solid 3px #666666;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section th {
+            text-align: left;
+            padding: 10px;
+        }
+
+        .section td {
+            padding: 10px;
+        }
+
+        .list li {
+            margin-bottom: 10px;
+        }
+
+        .sheet {
+            height: unset !important;
+            min-height: 296mm;
+        }
+    </style>
+</head>
+
+<body class="A4" style="padding-top: 40px; padding-bottom: 40px;">
+
+    <div class="wrapper sheet">
+        <table class="main">
+            <tbody>
+                <tr>
+                    <td class="w-20">
+                        <img
+                            src="{{profile_picture}}">
+                    </td>
+
+                    <td class="intro w-80">
+                        <h1>{{first_name}} {{last_name}}</h1>
+                        <p>
+                            <span class="w-60 inline-block">
+                                <b>Email:</b> {{email}}
+                            </span>
+                            <!-- <span class="w-40 text-right">
+                                <b>DOB:</b> January ##, ####
+                            </span> -->
+                        </p>
+                        <p>
+                            <b>Address:</b> {{address}}
+                        </p>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>
+                            <b>About me:</b> {{about_me}}
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="w-100 section">
+            <tbody>
+                <tr>
+                    <td colspan="4" class="section-header">
+                        <h3>EDUCATION</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Degree</th>
+                    <th colspan="1">University/Institute</th>
+                    <th colspan="1">Year</th>
+                    <!-- <th colspan="1">CPI/Aggregate</th> -->
+                </tr>
+                {{education_list}}
+            </tbody>
+        </table>
+
+        <table class="w-100 section">
+            <tbody>
+                <tr>
+                    <td colspan="2" class="section-header">
+                        <h3>SKILLS</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-30">
+                        <b>Expertise Area/Area(s) of Interest</b>
+                    </td>
+                    <td class="w-70">
+                        {{skills_list}}
+                    </td>
+                </tr>
+        </table>
+        
+        <div class="page-break"></div>
+
+        <table class="w-100 section">
+            <tbody>
+                <tr>
+                    <td colspan="3" class="section-header">
+                        <h3>PROFESSIONAL EXPERIENCE</h3>
+                    </td>
+                </tr>
+                {{experience_list}}
+            </tbody>
+        </table>
+
+        <table class="w-100 section">
+            <tbody>
+                <tr>
+                    <td colspan="2" class="section-header">
+                        <h3>PROJECTS</h3>
+                    </td>
+                </tr>
+                {{projects_list}}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

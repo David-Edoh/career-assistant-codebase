@@ -1,0 +1,11 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+
+  color: "#043E52"
+  image: "assets/images/fotisia_logo_large.png"
+
+  android_12:
+    color: "#043E52"
+    image: "assets/images/fotisia_logo_large_android_12.png"

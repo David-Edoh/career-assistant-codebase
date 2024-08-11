@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "35390605432",
+    "project_id": "fotisia-485cf",
+    "storage_bucket": "fotisia-485cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35390605432:android:73ee2291260a477989c58d",
+        "android_client_info": {
+          "package_name": "com.example.careerassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35390605432-r015qlt8ea183m9rdhgr8ethpa42tuf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.careerassistant",
+            "certificate_hash": "5d6b2d0135ae8d3119eb5184565e1ed1fbe76b5d"
+          }
+        },
+        {
+          "client_id": "35390605432-43f4r8hvo5llkvps7qo5ukrubkh2m9bd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZVUTU5DJhbnTsrUsdFfhPfXCBChtVxE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35390605432-43f4r8hvo5llkvps7qo5ukrubkh2m9bd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "35390605432-2rcv08cfu4ahtoc3oe1tg4rtovnrjaub.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fotisia.fotisia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

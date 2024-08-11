@@ -1,0 +1,127 @@
+name: fotisia
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.4 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_bloc: ^8.0.0
+  connectivity_plus: ^6.0.1
+  shared_preferences: ^2.0.15
+  cached_network_image: ^3.2.1
+  flutter_svg: ^2.0.9
+  equatable: ^2.0.0
+  google_sign_in: ^6.2.1
+  pin_code_fields: ^8.0.1
+  carousel_slider: ^4.2.1
+  smooth_page_indicator: ^1.0.0+2
+  sms_autofill: ^2.0.0
+  dotted_border: ^2.1.0
+  dio: ^5.1.1
+  fluttertoast: ^8.0.8
+  cupertino_icons: ^1.0.2
+  flutter_dotenv: ^5.1.0
+  http: ^1.1.0
+  flutter_secure_storage: ^9.0.0
+  loading_animation_widget: ^1.2.0+4
+  graphview: ^1.2.0
+  any_link_preview: ^3.0.0
+  url_launcher: ^6.2.1
+  webview_flutter: ^4.4.2
+  textfield_tags: 2.0.2
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  pick_or_save: ^2.2.4
+  sliding_up_panel: ^2.0.0+1
+  quill_html_editor: ^2.1.9
+  html_unescape: ^2.0.0
+  image_cropper: ^5.0.1
+  image: ^4.1.3
+  appinio_video_player: ^1.2.2
+  fijkplayer: ^0.11.0
+  video_player: ^2.8.1
+  intl: ^0.18.1
+  contained_tab_bar_view: ^0.8.0
+  dropdown_button2: ^2.3.9
+  firebase_core: ^2.28.0
+  signin_with_linkedin: ^1.0.0
+  webcontent_converter:
+    git:
+      url: https://github.com/kechankrisna/webcontent_converter.git
+      ref: master
+  share_plus: ^8.0.2
+  google_mobile_ads: ^5.0.0
+  firebase_messaging: ^14.9.2
+  speech_to_text: ^6.6.0
+  socket_io_client: ^2.0.3+1
+  audioplayers: ^6.0.0
+  just_audio: ^0.9.38
+  rotated_corner_decoration: ^2.1.0+1
+  text_scroll: ^0.2.0
+  animated_floating_button_pro: ^0.0.2
+  shimmer: ^3.0.0
+  accessibility_tools: 2.1.0
+  flutter_local_notifications: ^17.1.2
+  # workmanager: ^0.5.2
+  workmanager:
+    git:
+      url: https://github.com/fluttercommunity/flutter_workmanager.git
+      ref: b783000
+  timezone: ^0.9.3
+  lottie: ^3.1.2
+  flutter_native_splash: ^2.4.0
+  pdfx: ^2.6.0
+  read_pdf_text: ^0.2.1
+  file_picker: ^6.2.1
+  file_saver: ^0.2.13
+  file_selector: ^1.0.3
+  flutter_file_dialog: ^3.0.2
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/animations/
+    - .env
+  fonts:
+    - family: Plus Jakarta Sans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSansSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PlusJakartaSansBold.ttf
+          weight: 700
+        - asset: assets/fonts/PlusJakartaSansMedium.ttf
+          weight: 500
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/InterSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/InterMedium.ttf
+          weight: 500
+        - asset: assets/fonts/InterRegular.ttf
+          weight: 400
+        - asset: assets/fonts/InterBold.ttf
+          weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
