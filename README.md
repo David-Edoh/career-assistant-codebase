@@ -1,4 +1,4 @@
-# Personalized Learning Roadmap App
+# Career Assistant
 
 Welcome to our Personalized career assistant agent! This app leverages the power of Gemini AI to generate tailored journeys that help users achieve their career goals, no matter their starting point. Whether you're a beginner or an advanced learner, our app provides a structured path to success, complete with certifications, portfolio projects, and soft-skill development tailored to your needs, opportunities and events.
 
